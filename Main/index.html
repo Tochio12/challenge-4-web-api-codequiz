@@ -17,7 +17,7 @@
         </div>
     </header>
 
-    <section id="start-container" class="start-quiz">
+    <section id="start-section" class="start-quiz">
         <h1>Coding Quiz Challenge</h1>
         <p>
             Try to answer the following code-related questions within the limit.
@@ -27,6 +27,23 @@
             <button id="start-button" class="start-button">Start Quiz</button>
         </div>
     </section>
+
+    <section id="question-section" class="hide">
+        <h1 id="questions">Question</h1>
+        <div id="answer-buttons" class="button-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <h2 id="answer-check" class="wrong hide"></h2>
+        <div class="controls">
+            <button id="next-button" class="next-button hide">Next</button>
+        </div>
+    </section>
+
+
     <script src="./assests/js/script.js"></script>
+    <script src="./assests/js/questions.js"></script>
 </body>
 </html>
