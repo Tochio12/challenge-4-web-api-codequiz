@@ -4,10 +4,10 @@ var startButton = document.getElementById("start-button");
 var startSectionEl = document.getElementById("start-section");
 var questionSectionEl = document.getElementById("question-section");
 var nextButton = document.getElementById("next-button");
-var currentQuestion;
-var questionEl = document.getElementById("questions");
+var currentQuestion, shuffledQuestions;
+var questionEl = document.getElementById("question");
 var answerButtonEl = document.getElementById("answer-buttons");
-var shuffledQuestions;
+var timerID;
 
 
 //getting the start buuton to work and display the next button
@@ -33,6 +33,7 @@ function startQuiz() {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
     questionSectionEl.classList.remove("hide");
+
     countdown();
     nextQuestion();
 
@@ -46,8 +47,7 @@ function nextQuestion() {
 // show question
 function displayQuestion(question) {
     questionEl.innerText = question.question
-    question.answers.forEach(answer => 
-        {
+    question.answers.forEach(answer => {
             var button = document.createElement("button")
             button.innerText = answer.text
             button.classList.add("btn")
@@ -55,5 +55,11 @@ function displayQuestion(question) {
                 button.dataset.correct = answer.correct
             }
         })
+}
+
+// resets the function
+function stateRest() {
+    nextButton.classList.add("hide")
+
 }
 
