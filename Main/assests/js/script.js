@@ -86,5 +86,15 @@ function answerSelect(t) {
             timeLeft -= 10;
         }
     }
-}
+
+    if (shuffledQuestions.length > currentQuestion + 1) {
+        nextButton.classList.remove("hidden")
+        answerCheckEl.classList.remove("hidden")
+    }else {
+        startButton.classList.remove("hidden")
+    }
+};
+
+
+
 
