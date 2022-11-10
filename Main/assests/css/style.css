@@ -13,6 +13,7 @@ body {
     line-height: 2;
     width: 50%;
     margin: 0;
+    text-align: center;
 }
 
 header {
@@ -21,3 +22,6 @@ header {
     justify-content: space-between;
     margin: 20px 0;
 }
+
+
+

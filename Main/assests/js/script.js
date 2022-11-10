@@ -93,7 +93,7 @@ function answerSelect(t) {
     }else {
         startButton.classList.remove("hidden")
     }
-};
+}
 
 
 
