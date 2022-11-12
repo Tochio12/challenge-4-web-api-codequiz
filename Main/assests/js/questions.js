@@ -1,47 +1,47 @@
 var questions = [
     {
-        question: "How?",
+        question: "What Pokemon does Charmander evolve into?",
         answers: [ 
-            { text: "A", correct: false },
-            { text: "B", correct: false },
-            { text: "C", correct: false },
-            { text: "D", correct: true }
+            { text: "Charmeleon", correct: false },
+            { text: "Mew", correct: false },
+            { text: "Piplup", correct: false },
+            { text: "Charizard", correct: true }
         ]
     },
     {
-        question: "Why?",
+        question: "What was Ashes first Pokemon?",
         answers: [ 
-            { text: "A", correct: false },
-            { text: "B", correct: false },
-            { text: "C", correct: false },
-            { text: "D", correct: true }
+            { text: "Eevee", correct: false },
+            { text: "Pikachu", correct: true },
+            { text: "Squirtle", correct: false },
+            { text: "Blaziken", correct: false }
         ]
     },
     {
-        question: "When?",
+        question: "What are the legendary bird's names in the first generation?",
         answers: [ 
-            { text: "A", correct: false },
-            { text: "B", correct: false },
-            { text: "C", correct: false },
-            { text: "D", correct: true }
+            { text: "Ho-oh, Articuno, Zapdos", correct: false },
+            { text: "Moltres, Zapdos, Articuno", correct: true },
+            { text: "Moltres, Zapos, Articumo", correct: false },
+            { text: "Moltrez, Zapados, Arcunio", correct: false }
         ]
     },
     {
-        question: "What?",
+        question: "Which Pokemon is known as the 'Mouse Pokemon?",
         answers: [ 
-            { text: "A", correct: false },
-            { text: "B", correct: false },
-            { text: "C", correct: false },
-            { text: "D", correct: true }
+            { text: "Mew", correct: false },
+            { text: "Lucario", correct: false },
+            { text: "Pikachu", correct: true },
+            { text: "Micky-Mouse", correct: false }
         ]
     },
     {
-        question: "Who?",
+        question: "Which pokemon has the ability to transform into any pokemon it wants?",
         answers: [ 
-            { text: "A", correct: false },
-            { text: "B", correct: false },
-            { text: "C", correct: false },
-            { text: "D", correct: true }
+            { text: "Mewtwo", correct: false },
+            { text: "Lucario", correct: false },
+            { text: "Magikarp", correct: false },
+            { text: "Ditto", correct: true }
         ]
     },
 ];

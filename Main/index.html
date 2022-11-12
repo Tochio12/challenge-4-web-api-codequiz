@@ -8,19 +8,22 @@
     <link rel="stylesheet" href="./assests/css/style.css">
 </head>
 <body>
+
+    <!--Timer and highscore-->
     <header>
         <div class="scores">
-            <a id="highscores">View high scores</a>
+            <a id="highscores-link">View high scores</a>
         </div>
         <div id="timer" class="timer">
             Time: 75
         </div>
     </header>
 
+    <!--start of the quiz and how the games works-->
     <section id="start-section" class="start-quiz">
-        <h1>Coding Quiz Challenge</h1>
+        <h1>Pokemon Quiz Challenge</h1>
         <p>
-            Try to answer the following code-related questions within the limit.
+            Try to answer the following Pokemon related questions within the time limit.
             Keep in mind the incorrect answer will penalize your scoretime by ten seconds!
         </p>
         <div class="controls">
@@ -28,6 +31,7 @@
         </div>
     </section>
 
+        <!--Questions and the multiple choice-->
     <section id="question-section" class="hidden">
         <h1 id="question">Question</h1>
         <div id="answer-buttons" class="button-grid">
@@ -42,7 +46,27 @@
         </div>
     </section>
 
+    <!-- sumbit your intials -->
+    <section id="score-section" class="hidden">
+        <form id="submit-grid">
+            <h3 id="users-score"></h3>
+            <label id="initials-label">Enter you initials to save your score:</label>
+            <input type="text" id="initial-section" maxlength="3" placeholder="Enter you initials" />
+            <button id="submit-button">Submit</button>
+        </form>
+    </section>
 
+    <section id="highscores" class="highscores-container hidden">
+        <div id="high-scores">
+            <h1 class="centered">Leaderboard</h1>
+        </div>
+        <div class="controls">
+            <button id="restart-button">Restart</button>
+            <button id="clear-button">Clear Scores</button>
+        </div>
+    </section>
+
+    <!--Linking the 2 js files needed-->
     <script src="./assests/js/script.js"></script>
     <script src="./assests/js/questions.js"></script>
 </body>
