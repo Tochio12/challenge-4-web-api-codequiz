@@ -16,7 +16,7 @@ var scores = JSON.parse(localStorage.getItem("scores")) || [];
 var submitButton = document.getElementById("submit-button");
 var viewHighscores = document.getElementById("highscores-link");
 var clearScoreButton = document.getElementById("clear-button");
-var restartButton = document.getElementById("restart-button")
+var restartButton = document.getElementById("restart-button");
 
 //getting the start buuton to work and display the next button
 startButton.addEventListener("click", startQuiz);
@@ -105,28 +105,28 @@ function scoreSaver() {
     clearInterval(timerID);
     timerEl.textContent = "Time: " + timeLeft;
     setTimeout(function () {
-        questionSectionEl.classList.add("hide");
-        document.getElementById("score-section").classList.remove("hide");
+        questionSectionEl.classList.add("hidden");
+        document.getElementById("score-section").classList.remove("hidden");
         document.getElementById("users-score").textContent = "Your final score is " + timeLeft;
     }, 2000)
 }
 
 var outputScores = function () {
 
-    if (!scoreSaver) {
+    if (!scoreSaved) {
         return false;
     }
 
-    scoreSaver = JSON.parse(scoreSaver);
+    scoreSaved = JSON.parse(scoreSaved);
     var initials = document.querySelector("#initial-section").value;
     var newScore = {
         score: timeLeft,
         initials: initials
     }
-    scoreSaver.push(newScore);
+    scoreSaved.push(newScore);
     console.log(scoreSaver)
 
-    scoreSaver.forEach(score => {
+    scoreSaved.forEach(score => {
         initialSector.innerText = score.initials
         scoreField.innerText = score.score
     })
@@ -134,10 +134,10 @@ var outputScores = function () {
 
 // function to show highscores
 function relayHighScores(initials) {
-    document.getElementById("highscores").classList.remove("hide");
-    document.getElementById("score-section").classList.add("hide");
-    startSectionEl.classList.add("hide");
-    questionSectionEl.classList.add("hide");
+    document.getElementById("highscores").classList.remove("hidden");
+    document.getElementById("score-section").classList.add("hidden");
+    startSectionEl.classList.add("hidden");
+    questionSectionEl.classList.add("hiddden");
     if (typeof initials == "string") {
         var score = {
             initials, timeLeft
@@ -164,6 +164,26 @@ localStorage.setItem("scores", JSON.stringify(scores));
 }
 
 viewHighscores.addEventListener("click", relayHighScores);
+
+submitButton.addEventListener("click", function (event) {
+    event.preventDefault()
+    var initials = document.querySelector("#initial-section").value;
+    relayHighScores(initials);
+})
+
+// reload page
+restartButton.addEventListener("click", function () {
+    window.location.reload();
+})
+
+clearScoreButton.addEventListener("click", function () {
+    localStorage.clear();
+    document.getElementById("highscore").innerHTML = "";
+})
+
+
+
+
 
 
 
